@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Feane - Book A Table</title>
+    <title>CampusBite - Book A Table</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -18,159 +18,99 @@
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
+    <!-- NAVBAR -->
     <nav class="navbar">
-
-        <!-- Logo -->
 
         <div class="logo">
             <a href="index.html">CampusBite</a>
         </div>
 
-
-        <!-- Menu -->
-
         <div class="menu">
-
-            <a href="index.html">
-                HOME
-            </a>
-
-            <a href="menu.html">
-                MENU
-            </a>
-
-            <a href="about.html">
-                ABOUT
-            </a>
-
-            <a href="booktable.html" class="active">
-                BOOK TABLE
-            </a>
-
+            <a href="index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="about.html">ABOUT</a>
+            <a href="booktable.html" class="active">BOOK TABLE</a>
         </div>
 
-
-        <!-- Right Side -->
-
         <div class="right-menu">
-
-            <a href="#">
-                <i class="fa-solid fa-user"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-
-            <button>
-                Order Online
-            </button>
-
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <button>Order Online</button>
         </div>
 
     </nav>
 
-
-    <!-- =========================
-         BOOK TABLE SECTION
-    ========================== -->
-
+    <!-- BOOK TABLE SECTION -->
     <section class="booking-section">
 
         <div class="booking-container">
 
-
-            <!-- LEFT SIDE -->
-
+            <!-- BOOKING FORM -->
             <div class="booking-form">
 
-                <h1>
-                    Book A Table
-                </h1>
+                <h1>Book A Table</h1>
 
+                <form id="bookingForm">
 
-                
-<form id="bookingForm">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    >
 
-    <!-- Name -->
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-    >
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        required
+                    >
 
-    <!-- Phone -->
-    <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        required
-    >
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    >
 
-    <!-- Email -->
-    <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-    >
+                    <select name="persons" required>
+                        <option value="">How many persons?</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Persons</option>
+                        <option value="3">3 Persons</option>
+                        <option value="4">4 Persons</option>
+                        <option value="5">5 Persons</option>
+                        <option value="6">6 Persons</option>
+                    </select>
 
-    <!-- Persons -->
-    <select name="persons" required>
-        <option value="">How many persons?</option>
-        <option value="1">1 Person</option>
-        <option value="2">2 Persons</option>
-        <option value="3">3 Persons</option>
-        <option value="4">4 Persons</option>
-        <option value="5">5 Persons</option>
-        <option value="6">6 Persons</option>
-    </select>
+                    <input
+                        type="date"
+                        name="date"
+                        required
+                    >
 
-    <!-- Date -->
-    <input
-        type="date"
-        name="date"
-        required
-    >
+                    <button type="submit" class="book-btn">
+                        BOOK NOW
+                    </button>
 
-    <!-- Button -->
-    <button type="submit" class="book-btn">
-        BOOK NOW
-    </button>
+                </form>
 
-</form>
-
+                <p id="bookingMessage" role="status"></p>
 
             </div>
 
-
-            <!-- RIGHT SIDE MAP -->
-
+            <!-- MAP -->
             <div class="map-container">
 
                 <div class="map">
 
                     <div class="map-overlay">
-
                         <i class="fa-solid fa-location-dot"></i>
 
-                        <h3>
-                            CampusBite Restaurant
-                        </h3>
+                        <h3>CampusBite Restaurant</h3>
 
-                        <p>
-                            Restaurant Location
-                        </p>
-
+                        <p>Restaurant Location</p>
                     </div>
 
                     <div class="map-pin">
@@ -184,131 +124,147 @@
         </div>
 
     </section>
-     <!-- =========================
-             FOOTER
-        ========================== -->
 
-        <footer>
+    <!-- FOOTER -->
+    <footer>
 
-            <div class="footer-container">
+        <div class="footer-container">
 
+            <div class="footer-column">
 
-                <!-- CONTACT US -->
+                <h2>Contact Us</h2>
 
-                <div class="footer-column">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Location
+                </p>
 
-                    <h2>
-                        Contact Us
-                    </h2>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Call +01 1234567890
+                </p>
 
-                    <p>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Location
-                    </p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    demo@gmail.com
+                </p>
 
-                    <p>
-                        <i class="fa-solid fa-phone"></i>
-                        Call +01 1234567890
-                    </p>
+            </div>
 
-                    <p>
-                        <i class="fa-solid fa-envelope"></i>
-                        demo@gmail.com
-                    </p>
+            <div class="footer-column feane-column">
 
-                </div>
+                <h2>CampusBite</h2>
 
+                <p>
+                    Necessary, making this the first true generator on
+                    the Internet. It uses a dictionary of over 200
+                    Latin words, combined with
+                </p>
 
-                <!-- FEANE -->
+                <div class="social-icons">
 
-                <div class="footer-column feane-column">
-
-                    <h2>
-                        CampusBite
-                    </h2>
-
-                    <p>
-                        Necessary, making this the first true generator on
-                        the Internet. It uses a dictionary of over 200
-                        Latin words, combined with
-                    </p>
-
-
-                    <!-- SOCIAL ICONS -->
-
-                    <div class="social-icons">
-
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- OPENING HOURS -->
-
-                <div class="footer-column">
-
-                    <h2>
-                        Opening Hours
-                    </h2>
-
-                    <p>
-                        Everyday
-                    </p>
-
-                    <p>
-                        10.00 Am - 10.00 Pm
-                    </p>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
 
                 </div>
 
             </div>
 
+            <div class="footer-column">
 
-            <!-- LINE -->
+                <h2>Opening Hours</h2>
 
-            <hr>
+                <p>Everyday</p>
 
-
-            <!-- COPYRIGHT -->
-
-            <div class="copyright">
-
-                <p>
-                    © 2026 All Rights Reserved By Free Html Templates
-                </p>
-
-                <p>
-                    © Distributed By ThemeWagon
-                </p>
+                <p>10.00 Am - 10.00 Pm</p>
 
             </div>
 
-        </footer>
+        </div>
 
-    </section>
+        <hr>
 
+        <div class="copyright">
 
+            <p>© 2026 All Rights Reserved By Free Html Templates</p>
+
+            <p>© Distributed By ThemeWagon</p>
+
+        </div>
+
+    </footer>
+
+    <!-- BOOKING JAVASCRIPT -->
+    <script>
+
+        const bookingForm = document.getElementById("bookingForm");
+        const bookingMessage = document.getElementById("bookingMessage");
+
+        bookingForm.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            const formData = new FormData(bookingForm);
+
+            const bookingData = {
+                name: formData.get("name").trim(),
+                phone: formData.get("phone").trim(),
+                email: formData.get("email").trim(),
+                persons: Number(formData.get("persons")),
+                date: formData.get("date")
+            };
+
+            const submitButton = bookingForm.querySelector("button");
+
+            try {
+
+                submitButton.disabled = true;
+                submitButton.textContent = "PLEASE WAIT...";
+
+                const response = await fetch(
+                    "http://localhost:5000/api/reservations",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(bookingData)
+                    }
+                );
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.message || "Booking failed");
+                }
+
+                bookingMessage.textContent = "Table booked successfully!";
+                bookingMessage.style.color = "green";
+
+                bookingForm.reset();
+
+            } catch (error) {
+
+                bookingMessage.textContent =
+                    error.message === "Failed to fetch"
+                        ? "Server se connection nahi ho paaya. Please try again."
+                        : error.message;
+
+                bookingMessage.style.color = "red";
+
+            } finally {
+
+                submitButton.disabled = false;
+                submitButton.textContent = "BOOK NOW";
+
+            }
+
+        });
+
+    </script>
 
 </body>
-
 </html>
